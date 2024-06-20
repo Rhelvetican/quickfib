@@ -1,0 +1,9 @@
+[package]
+name = "quickfib"
+authors = ["Rhelvetican <bionicvnb@gmail.com>"]
+keywords = ["fibonacci", "rust", "quickfib", "no_std"]
+description = "A no_std compatible Fibonacci calculation algorithm implemented in Rust."
+license = "MIT"
+
+version = "1.0.0"
+edition = "2021"
