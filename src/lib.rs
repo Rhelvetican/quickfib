@@ -64,7 +64,7 @@ where
 /// # Examples
 /// ```rust
 ///
-/// let x = quickfib::fibbonacci_range(0..10);
+/// let x = quickfib::fibbonacci_range(0..=9);
 /// assert_eq!(x, vec![0, 1, 1, 2, 3, 5, 8, 13, 21, 34]);
 /// ```
 
@@ -89,7 +89,8 @@ where
 
 #[cfg(test)]
 mod tests {
-    use super::fibbonacci;
+
+    use super::{fibbonacci, fibbonacci_range};
 
     #[test]
     fn calc_1() {
@@ -113,5 +114,11 @@ mod tests {
     fn calc_4() {
         let result = fibbonacci::<u128>(100);
         assert_eq!(result, 354224848179261915075);
+    }
+
+    #[test]
+    fn calc_range() {
+        let result = fibbonacci_range(0..=9);
+        assert_eq!(result, vec![0, 1, 1, 2, 3, 5, 8, 13, 21, 34]);
     }
 }
